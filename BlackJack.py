@@ -9,10 +9,26 @@ values = {'two':2,'three':3,'four':4,'five':5, 'six':6, 'seven':7, 'eight':8,
 
 
 class Card():
-	pass
+	def __init__(self, suit, rank):
+		self.suit = suit
+		self.rank = rank
+
+	def __str__(self):
+		return self.rank+' of '+self.suit
 
 class Deck():
-	pass
+	def __init__(self):
+		self.cards = []
+		for suit in suits:
+			for rank in ranks:
+				self.cards.append(Card(suit, rank))
+
+	def __str__(self):
+		deck_comp = ''
+		for card in self.cards:
+			deck_comp += '\n'+ card.__str__()
+		return deck_comp
+
 
 class Hand():
 	pass
@@ -20,3 +36,7 @@ class Hand():
 class Chips():
 	pass
 
+x = Card('spades','two')
+print(x)
+y = Deck()
+print(y)
