@@ -29,9 +29,30 @@ class Deck():
 			deck_comp += '\n'+ card.__str__()
 		return deck_comp
 
+	def shuffle(self):
+		random.shuffle(self.cards)
+
+	def deal(self):
+		return self.cards.pop()
+
 
 class Hand():
-	pass
+	def __init__(self):
+		self.cards = []
+		self.value = 0
+		self.aces = 0
+
+	def add_card(self, card):
+		self.cards.append(card)
+		self.value += values[card.rank]
+
+		if card.rank == 'ace':
+			self.aces += 1
+
+	def adjust_for_ace(self):
+		while self.value > 21 and self.aces > 1:
+			self.value -= 10
+			self.aces -= 1
 
 class Chips():
 	pass
@@ -39,4 +60,12 @@ class Chips():
 x = Card('spades','two')
 print(x)
 y = Deck()
+y.shuffle()
 print(y)
+h = Hand()
+deal_card = y.deal()
+print("The card that has been dealt is:")
+print(deal_card)
+h.add_card(deal_card)
+print('The Value is:')
+print(h.value)
