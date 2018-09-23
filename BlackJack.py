@@ -55,7 +55,15 @@ class Hand():
 			self.aces -= 1
 
 class Chips():
-	pass
+	def __init__(self):
+		self.chips = 100
+		self.bet = 0
+
+	def win_bet(self):
+		self.chips += self.bet
+
+	def lose_bet(self):
+		self.chips -= self.bet
 
 x = Card('spades','two')
 print(x)
