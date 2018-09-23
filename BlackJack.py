@@ -65,6 +65,33 @@ class Chips():
 	def lose_bet(self):
 		self.chips -= self.bet
 
+
+def take_bet(chips):
+	pass
+
+def take_hit(hand,deck):
+	pass
+
+def hit_or_stand(hand,deck):
+	pass
+
+def display_some(player_hand,dealer_hand):
+	pass
+
+def display_all(player_hand,dealer_hand):
+	pass
+
+def player_busts(player_hand,player_chips):
+	pass
+
+def dealer_busts(dealer_hand, player_chips):
+	pass
+
+def dealer_wins(player_hand,dealer_hand):
+	pass
+
+
+
 x = Card('spades','two')
 print(x)
 y = Deck()
