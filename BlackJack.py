@@ -135,7 +135,6 @@ def display_all(player_hand,dealer_hand):
 def dealer_turn(hand,deck):
 	while dealer_hand.value < 17:
 		take_hit(hand,deck)
-		hand.adjust_for_ace()
 
 
 
