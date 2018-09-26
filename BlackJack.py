@@ -194,7 +194,7 @@ Dealer hits until she reaches 17.
 
 	# Adjust for Aces:
 	player_hand.adjust_for_ace()
-
+	dealer_hand.adjust_for_ace()
 
 	# Take a bet:
 	take_bet(chips)
