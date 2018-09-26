@@ -169,8 +169,9 @@ def push(chips):
 
 
 
-
+chips = Chips()
 while True:
+
 	print('\n'*100)
 	print('''
 Welcome to Black Jack!
@@ -183,7 +184,9 @@ Dealer hits until she reaches 17.
 
 	player_hand = Hand()
 	dealer_hand = Hand()
-	chips = Chips()
+
+	if chips == 0:
+		chips = Chips()
 
 	# Deal 2 cards to the player and dealer:
 	player_hand.add_card(deck.deal())
